@@ -17,6 +17,7 @@ preprocessors:
     - metagraph:
         natural: false
         directed: false
+        draw_all: false
 ```
 
 `natural`
@@ -25,21 +26,24 @@ preprocessors:
 `directed`
 :   If `true` — draws a directed graph (with arrows). Default: `false`
 
+`draw_all`
+:   If `true` — draws all sections, except those which have meta field `draw: false`. If `false` — draws only sections which have meta field `draw: true`. Default: `false`
+
 ## Usage
 
 First set up a few meta sections:
 
 ```html
-<meta title="Main document" id="main" relates="['first', 'sub']"></meta>
+<meta title="Main document" id="main" relates="['first', 'sub']" draw="true"></meta>
 
 # First title
-<meta id="first"></meta>
+<meta id="first" draw="true"></meta>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, atque.
 
 ## Subtitle
 
-<meta id="sub"></meta>
+<meta id="sub"  draw="true"></meta>
 ```
 
 Then add a `metagraph` tag somewhere in the project:

@@ -38,9 +38,10 @@ class ChaptersGraph:
 
     def _draw_nodes(self, graph: AGraph):
         for section in self.meta.iter_sections():
-            title = section.data.get('title', section.title)
-            graph.add_node(section.id,
-                           label=title)
+            if self.config['draw_all'] or section.data.get('draw', False):
+                title = section.data.get('title', section.title)
+                graph.add_node(section.id,
+                               label=title)
 
     def _draw_edges(self, graph: AGraph, natural: bool):
         def add_child_edges(section):
@@ -52,9 +53,10 @@ class ChaptersGraph:
                 add_child_edges(chapter.main_section)
         else:
             for section in self.meta.iter_sections():
-                if REL_KEY in section.data:
-                    id_list = section.data[REL_KEY]
-                    if not isinstance(id_list, list):
-                        id_list = [id_list]
-                    for rel_id in id_list:
-                        graph.add_edge(section.id, rel_id)
+                if self.config['draw_all'] or section.data.get('draw', False):
+                    if REL_KEY in section.data:
+                        id_list = section.data[REL_KEY]
+                        if not isinstance(id_list, list):
+                            id_list = [id_list]
+                        for rel_id in id_list:
+                            graph.add_edge(section.id, rel_id)

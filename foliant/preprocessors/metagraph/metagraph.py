@@ -14,6 +14,7 @@ class Preprocessor(BasePreprocessorExt):
     defaults = {
         'natural': False,
         'directed': False,
+        'draw_all': False,
     }
 
     def __init__(self, *args, **kwargs):
