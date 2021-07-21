@@ -1,3 +1,7 @@
+# 0.1.3
+
+- New utils module.
+
 # 0.1.2
 
 - Metadata is now taken from src_dir to minimize possible conflicts with other preprocessors.

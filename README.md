@@ -1,4 +1,4 @@
-[![](https://img.shields.io/pypi/v/foliantcontrib.metagraph.svg)](https://pypi.org/project/foliantcontrib.metagraph/)  [![](https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.metagraph.svg?label=GitHub)](https://github.com/foliant-docs/foliantcontrib.metagraph)
+[![](https://img.shields.io/pypi/v/foliantcontrib.metagraph.png)](https://pypi.org/project/foliantcontrib.metagraph/)  [![](https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.metagraph.png?label=GitHub)](https://github.com/foliant-docs/foliantcontrib.metagraph)
 
 # MetaGraph preprocessor for Foliant
 

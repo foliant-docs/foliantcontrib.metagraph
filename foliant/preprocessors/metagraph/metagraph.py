@@ -3,10 +3,10 @@ Preprocessor for Foliant documentation authoring tool.
 Generates graphviz diagram based on metadata.
 '''
 
-from foliant.preprocessors.utils.preprocessor_ext import (BasePreprocessorExt,
-                                                          allow_fail)
-from foliant.meta.generate import load_meta
 from .draw import ChaptersGraph
+from foliant.meta.generate import load_meta
+from foliant.preprocessors.utils.preprocessor_ext import BasePreprocessorExt
+from foliant.preprocessors.utils.preprocessor_ext import allow_fail
 
 
 class Preprocessor(BasePreprocessorExt):
